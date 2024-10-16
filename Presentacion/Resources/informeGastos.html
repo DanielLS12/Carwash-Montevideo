@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, tr, td {
+            width: 150px;
+            height: 45px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .datosTabla {
+            border: 1px solid #000;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 12px;
+        }
+
+        th {
+            color: #fff;
+            background-color: #252525;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #eee;
+        }
+
+        .campos {
+            width: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 24px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: 35px;"><u>Carwash-Montevideo</u></h1>
+    <table border="1" style="width: 100%; margin-bottom: 5px;">
+        <tr style="border:none">
+            <td colspan="2">
+                <table style="width:100%;">
+                    <tr>
+                        <td colspan="1" style="width:20%;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">@NumGastos</td>
+                        <td align="right" style="width:20%;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">@Fecha</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <thead>
+            <tr class="datosTabla">
+                <th class="datosTabla">NOMBRES</th>
+                <th class="datosTabla">APELLIDOS</th>
+                <th class="datosTabla">DESCRIPCIÓN</th>
+                @GastoFec
+                <th class="datosTabla">GASTO (S/.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @Filas
+            <tr>
+                <td></td>
+                <td></td>
+                @ColumnaFecha
+                <td class="datosTabla">MONTO TOTAL (S/.)</td>
+                <td class="datosTabla">@GastoTotal</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
